@@ -1,0 +1,32 @@
+<ng-template #msg>
+    <div class="alert alert-info align-items-center"> <img src="assets/loader.svg" alt="" width="35px"> Por favor, aguarde.</div>
+</ng-template>
+
+<div *ngIf="country;else msg" class="row">
+    <div class="col-12">
+        <h1>{{country.name.official}}</h1>
+    </div>
+    <div class="row mt-3">
+        <div class="col-4">
+            <h3>Bandera</h3>
+            <shared-image [imageURL]="country.flags.svg"></shared-image>
+        </div>
+        <div class="col">
+            <h4>Informacion</h4>
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Poblacion: </strong>{{country.population | number }} </li>
+                <li class="list-group-item"><strong>Codigo: </strong> {{country.cca2}} </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col">
+            <h3>Traducciones</h3>
+            <div class="d-flex flex-wrap">
+                <div class="mx-2" *ngFor="let item of object.values(country.translations)">
+                    <span class="badge bg-primary">{{item.official}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

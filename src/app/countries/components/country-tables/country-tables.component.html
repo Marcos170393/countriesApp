@@ -1,0 +1,31 @@
+<div *ngIf="countries.length === 0;else list" class="alert alert-warning my-3">No hay paises</div>
+<ng-template #list>
+    <div class="border rounded p-3 mt-3 bg-light">
+        <table class="table table-hover shadow-sm align-middle">
+            <colgroup>
+                <col span="1" style="width: 7%;">
+                <col span="1" style="width: 20%;">
+                <col span="1" style="width: 25%;">
+                <col span="1" style="width: 25%;">
+                <col span="1" style="width: 8%;">
+             </colgroup>
+             
+            <thead class="mb-2">
+                <th>#</th>
+                <th >Bandera</th>
+                <th>Pais</th>
+                <th>Poblacion</th>
+                <th></th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let country of countries; let i = index">
+                    <td>{{i+1}}</td>
+                    <td ><shared-image [imageURL]="country.flags.svg"></shared-image></td>
+                    <td>{{country.name.official}}</td>
+                    <td>{{country.population | number}}</td>
+                    <td><button class="btn btn-secondary btn-sm"><a class="text-decoration-none text-light" [routerLink]="['/countries/by/',country.cca2]">ver mas</a></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</ng-template>

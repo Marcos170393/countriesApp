@@ -1,0 +1,2 @@
+<img (load)="onLoaded()" [ngStyle]="{display: isLoaded ? '' : 'none'}" [src]="imageURL" alt="" class="img-fluid"/>
+<img  *ngIf="!isLoaded"  src="assets/loader.svg" alt="" class="img-fluid">
