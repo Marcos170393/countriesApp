@@ -8,6 +8,7 @@
 </div>
 <div class="row">
     <div class="col">
+        <shared-loader *ngIf="isLoading"></shared-loader>
         <country-table [countries]="countriesList"></country-table>
     </div>
 </div>

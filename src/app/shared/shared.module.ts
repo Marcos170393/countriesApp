@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { ContactPageComponent } from './pages/contact/contact-page.component';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
 import { ImageComponent } from './components/image/image.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 
 
@@ -17,7 +18,8 @@ import { ImageComponent } from './components/image/image.component';
     SidebarComponent,
     ContactPageComponent,
     SearchBoxComponent,
-    ImageComponent
+    ImageComponent,
+    LoaderComponent
   ],
   imports: [
     CommonModule,
@@ -25,11 +27,12 @@ import { ImageComponent } from './components/image/image.component';
   ],
   exports:[
     AboutPageComponent,
-    HomePageComponent,
-    SidebarComponent,
     ContactPageComponent,
+    HomePageComponent,
+    ImageComponent,
+    LoaderComponent,
     SearchBoxComponent,
-    ImageComponent
+    SidebarComponent,
   ]
 })
 export class SharedModule { }
