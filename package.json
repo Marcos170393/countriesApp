@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:deploy":"ng build --base-href ./; rm -R ./docs; cp -R ./dist/03-country-app ./docs",
+    "build:deploy": "ng build --base-href ./; rm -R ./docs; cp -R ./dist/03-country-app ./docs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

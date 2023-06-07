@@ -1,8 +1,18 @@
-<div class="row mt-4">
-  <div class="col-3">
+<div class="row mt-4 p-0 h-100">
+
+  <div class="collapse collapse-horizontal col-3 h-100" id="collapseWidthExample">
     <shared-sidebar></shared-sidebar>
   </div>
-  <div class="col">
+
+  <div class="toggle-div m-0 p-0 border-end">
+    <!-- TOGGLE BUTTOM -->
+    <div class="text-center items-aligb-center" id="btn-toggle-sidebar" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+      <shared-image (click)="toggleBar()" *ngIf="show" [imageURL]="'assets/arrow-left.png'"></shared-image>
+      <shared-image (click)="toggleBar()" *ngIf="!show" [imageURL]="'assets/arrow-right.png'"></shared-image>
+    </div>
+  </div>
+
+  <div class="col mx-5 ">
     <router-outlet></router-outlet>
   </div>
 </div>

@@ -1,12 +1,12 @@
-<h2>Por pais</h2>
+<h2 class="display-4">By Country</h2>
 <hr>
 <div class="row">
     <div class="col">
-        <shared-search-box placeholder="Buscar por pais" (searchEvent)="searchByCountry($event)"></shared-search-box>
+        <shared-search-box placeholder="Search by country name" (searchEvent)="searchByCountry($event)"></shared-search-box>
     </div>
 </div>
 <div class="row">
-    <div class="col">
+    <div class="col text-center">
         <shared-loader *ngIf="isLoading"></shared-loader>
         <country-table [countries]="countriesList"></country-table>
     </div>

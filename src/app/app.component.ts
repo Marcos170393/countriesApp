@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = '03-Country-App';
+  show:boolean = false;
+
+  toggleBar(){
+    this.show = !this.show;
+  }
 }

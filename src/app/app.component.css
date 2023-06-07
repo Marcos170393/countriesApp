@@ -1,0 +1,14 @@
+body{
+    height: 100%;
+}
+
+#btn-toggle-sidebar{
+    position: fixed;
+    bottom:50%;
+    max-width: 30px;
+    cursor: pointer;
+}
+
+.toggle-div{
+    width: 30px;
+}

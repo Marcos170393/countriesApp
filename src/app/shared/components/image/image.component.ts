@@ -11,8 +11,6 @@ export class ImageComponent implements OnInit{
   public isLoaded:boolean=false;
 
   ngOnInit(): void {
-    console.log(this.imageURL);
-    
   }
 
   @Input()
