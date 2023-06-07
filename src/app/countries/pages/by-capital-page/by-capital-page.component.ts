@@ -8,12 +8,20 @@ import { Country } from '../../interfaces/country';
   styles: [
   ]
 })
-export class ByCapitalPageComponent{
+export class ByCapitalPageComponent implements OnInit{
 
   public countriesList:Country[]=[];
+  public initialValue:string='';
   public isLoading:boolean = false;
-
   constructor(private countriesService:CountriesService){}
+
+ ngOnInit(): void {
+    if(this.countriesService.cacheStore.byCapital.countries){
+      this.countriesList = this.countriesService.cacheStore.byCapital.countries;
+      this.initialValue = this.countriesService.cacheStore.byCapital.term;
+    }
+      
+ }
 
   searchByCapital(value:string):void{
     this.isLoading = true;

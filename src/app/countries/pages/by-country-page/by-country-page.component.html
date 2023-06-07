@@ -2,7 +2,7 @@
 <hr>
 <div class="row">
     <div class="col">
-        <shared-search-box placeholder="Search by country name" (searchEvent)="searchByCountry($event)"></shared-search-box>
+        <shared-search-box placeholder="Search by country name" [initialValue]="initialValue"  (searchEvent)="searchByCountry($event)"></shared-search-box>
     </div>
 </div>
 <div class="row">
